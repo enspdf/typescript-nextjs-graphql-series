@@ -56,23 +56,31 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             while (1) {
               switch (_context.prev = _context.next) {
                 case 0:
-                  _context.next = 2;
+                  _context.prev = 0;
+                  _context.next = 3;
                   return register({
                     variables: {
                       data: data
                     }
                   });
 
-                case 2:
+                case 3:
                   response = _context.sent;
                   console.log(response);
+                  _context.next = 10;
+                  break;
 
-                case 4:
+                case 7:
+                  _context.prev = 7;
+                  _context.t0 = _context["catch"](0);
+                  console.log("Err: ", Object.keys(_context.t0.graphQLErrors));
+
+                case 10:
                 case "end":
                   return _context.stop();
               }
             }
-          }, _callee, this);
+          }, _callee, this, [[0, 7]]);
         }));
 
         return function (_x) {
@@ -97,7 +105,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         onSubmit: handleSubmit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 34
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(formik__WEBPACK_IMPORTED_MODULE_3__["Field"], {
@@ -106,7 +114,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         component: _components_fields_InputField__WEBPACK_IMPORTED_MODULE_4__["InputField"],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31
+          lineNumber: 35
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(formik__WEBPACK_IMPORTED_MODULE_3__["Field"], {
@@ -115,7 +123,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         component: _components_fields_InputField__WEBPACK_IMPORTED_MODULE_4__["InputField"],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 36
+          lineNumber: 40
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(formik__WEBPACK_IMPORTED_MODULE_3__["Field"], {
@@ -124,7 +132,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         component: _components_fields_InputField__WEBPACK_IMPORTED_MODULE_4__["InputField"],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 45
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(formik__WEBPACK_IMPORTED_MODULE_3__["Field"], {
@@ -134,14 +142,14 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         component: _components_fields_InputField__WEBPACK_IMPORTED_MODULE_4__["InputField"],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 50
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
         type: "submit",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 52
+          lineNumber: 56
         },
         __self: this
       }, "Submit"));
@@ -171,4 +179,4 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 /***/ })
 
 })
-//# sourceMappingURL=register.js.f049b6bfdd0986402816.hot-update.js.map
+//# sourceMappingURL=register.js.fdefada4e9e03b61106c.hot-update.js.map
