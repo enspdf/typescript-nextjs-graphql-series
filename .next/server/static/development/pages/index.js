@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -236,61 +236,6 @@ var Layout = function Layout(_ref) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Layout);
-
-/***/ }),
-
-/***/ "./components/fields/InputField.tsx":
-/*!******************************************!*\
-  !*** ./components/fields/InputField.tsx ***!
-  \******************************************/
-/*! exports provided: InputField */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InputField", function() { return InputField; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/Users/sebastianhiguita/Desktop/typescript/typescript-nextjs-graphql-series/components/fields/InputField.tsx";
-
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
-
-var InputField = function InputField(_ref) {
-  var field = _ref.field,
-      _ref$form = _ref.form,
-      errors = _ref$form.errors,
-      touched = _ref$form.touched,
-      props = _objectWithoutProperties(_ref, ["field", "form"]);
-
-  var errorMessage = touched[field.name] && errors[field.name];
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 17
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", _extends({}, field, props, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18
-    },
-    __self: this
-  })), errorMessage && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    style: {
-      color: "red"
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19
-    },
-    __self: this
-  }, errorMessage));
-};
 
 /***/ }),
 
@@ -481,10 +426,10 @@ function RegisterHOC(operationOptions) {
 
 /***/ }),
 
-/***/ "./pages/register.tsx":
-/*!****************************!*\
-  !*** ./pages/register.tsx ***!
-  \****************************/
+/***/ "./pages/index.tsx":
+/*!*************************!*\
+  !*** ./pages/index.tsx ***!
+  \*************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -494,13 +439,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.tsx");
-/* harmony import */ var formik__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! formik */ "formik");
-/* harmony import */ var formik__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(formik__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_fields_InputField__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/fields/InputField */ "./components/fields/InputField.tsx");
-/* harmony import */ var _generated_apolloComponents__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../generated/apolloComponents */ "./generated/apolloComponents.tsx");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "next/link");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.tsx");
+/* harmony import */ var _generated_apolloComponents__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../generated/apolloComponents */ "./generated/apolloComponents.tsx");
 
-var _jsxFileName = "/Users/sebastianhiguita/Desktop/typescript/typescript-nextjs-graphql-series/pages/register.tsx";
+var _jsxFileName = "/Users/sebastianhiguita/Desktop/typescript/typescript-nextjs-graphql-series/pages/index.tsx";
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
@@ -511,157 +455,97 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = (function () {
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    title: "Register Page",
+var IndexPage = function IndexPage() {
+  return react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_components_Layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    title: "Home | Next.js + TypeScript Example",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 14
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_generated_apolloComponents__WEBPACK_IMPORTED_MODULE_5__["RegisterComponent"], {
+  }, react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 15
     },
     __self: this
-  }, function (register) {
-    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(formik__WEBPACK_IMPORTED_MODULE_3__["Formik"], {
-      validateOnBlur: false,
-      validateOnChange: false,
-      onSubmit:
+  }, "Hello Next.js \uD83D\uDC4B"), react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1__["createElement"](next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    href: "/about",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: this
+  }, "About"))), react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_generated_apolloComponents__WEBPACK_IMPORTED_MODULE_4__["LoginComponent"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: this
+  }, function (mutate) {
+    return react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("button", {
+      onClick:
       /*#__PURE__*/
-      function () {
-        var _ref2 = _asyncToGenerator(
-        /*#__PURE__*/
-        _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(data, _ref) {
-          var setErrors, response, errors;
-          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
-            while (1) {
-              switch (_context.prev = _context.next) {
-                case 0:
-                  setErrors = _ref.setErrors;
-                  _context.prev = 1;
-                  _context.next = 4;
-                  return register({
-                    variables: {
-                      data: data
-                    }
-                  });
+      _asyncToGenerator(
+      /*#__PURE__*/
+      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+        var response;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.next = 2;
+                return mutate({
+                  variables: {
+                    email: "test@test.com",
+                    password: "password"
+                  }
+                });
 
-                case 4:
-                  response = _context.sent;
-                  console.log(response);
-                  _context.next = 15;
-                  break;
+              case 2:
+                response = _context.sent;
+                console.log(response);
 
-                case 8:
-                  _context.prev = 8;
-                  _context.t0 = _context["catch"](1);
-                  console.log("Err: ", _context.t0.graphQLErrors);
-                  errors = {};
-
-                  _context.t0.graphQLErrors[0].validationErrors.forEach(function (validationErr) {
-                    Object.values(validationErr.constraints).forEach(function (message) {
-                      errors[validationErr.property] = message;
-                    });
-                  });
-
-                  console.log(errors);
-                  setErrors(errors);
-
-                case 15:
-                case "end":
-                  return _context.stop();
-              }
+              case 4:
+              case "end":
+                return _context.stop();
             }
-          }, _callee, this, [[1, 8]]);
-        }));
-
-        return function (_x, _x2) {
-          return _ref2.apply(this, arguments);
-        };
-      }(),
-      initialValues: {
-        email: "",
-        firstName: "",
-        lastName: "",
-        password: ""
-      },
+          }
+        }, _callee, this);
+      })),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 12
+        lineNumber: 23
       },
       __self: this
-    }, function (_ref3) {
-      var values = _ref3.values,
-          handleSubmit = _ref3.handleSubmit;
-      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("form", {
-        onSubmit: handleSubmit,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 49
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(formik__WEBPACK_IMPORTED_MODULE_3__["Field"], {
-        name: "firstName",
-        placeholder: "First Name",
-        component: _components_fields_InputField__WEBPACK_IMPORTED_MODULE_4__["InputField"],
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 50
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(formik__WEBPACK_IMPORTED_MODULE_3__["Field"], {
-        name: "lastName",
-        placeholder: "Last Name",
-        component: _components_fields_InputField__WEBPACK_IMPORTED_MODULE_4__["InputField"],
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 55
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(formik__WEBPACK_IMPORTED_MODULE_3__["Field"], {
-        name: "email",
-        placeholder: "Email",
-        component: _components_fields_InputField__WEBPACK_IMPORTED_MODULE_4__["InputField"],
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 60
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(formik__WEBPACK_IMPORTED_MODULE_3__["Field"], {
-        name: "password",
-        placeholder: "Password",
-        type: "password",
-        component: _components_fields_InputField__WEBPACK_IMPORTED_MODULE_4__["InputField"],
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 65
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
-        type: "submit",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 71
-        },
-        __self: this
-      }, "Submit"));
-    });
+    }, "Call Login Mutation");
   }));
-});
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (IndexPage);
 
 /***/ }),
 
-/***/ 3:
-/*!**********************************!*\
-  !*** multi ./pages/register.tsx ***!
-  \**********************************/
+/***/ 4:
+/*!*******************************!*\
+  !*** multi ./pages/index.tsx ***!
+  \*******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! ./pages/register.tsx */"./pages/register.tsx");
+module.exports = __webpack_require__(/*! ./pages/index.tsx */"./pages/index.tsx");
 
 
 /***/ }),
@@ -674,17 +558,6 @@ module.exports = __webpack_require__(/*! ./pages/register.tsx */"./pages/registe
 /***/ (function(module, exports) {
 
 module.exports = require("@babel/runtime/regenerator");
-
-/***/ }),
-
-/***/ "formik":
-/*!*************************!*\
-  !*** external "formik" ***!
-  \*************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("formik");
 
 /***/ }),
 
@@ -744,4 +617,4 @@ module.exports = require("react-apollo");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=register.js.map
+//# sourceMappingURL=index.js.map
