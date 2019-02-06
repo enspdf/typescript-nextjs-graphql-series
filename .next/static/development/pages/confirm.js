@@ -38054,7 +38054,7 @@ function (_React$PureComponent) {
 
 /***/ }),
 
-/***/ 5:
+/***/ 6:
 /*!*********************************!*\
   !*** multi ./pages/confirm.tsx ***!
   \*********************************/
@@ -38079,5 +38079,5 @@ module.exports = dll_b2d9fd95b535cd8bf589;
 
 /***/ })
 
-},[[5,"static/runtime/webpack.js"]]]));;
+},[[6,"static/runtime/webpack.js"]]]));;
 //# sourceMappingURL=confirm.js.map

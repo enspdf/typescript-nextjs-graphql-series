@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -499,6 +499,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var formik__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(formik__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _components_fields_InputField__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/fields/InputField */ "./components/fields/InputField.tsx");
 /* harmony import */ var _generated_apolloComponents__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../generated/apolloComponents */ "./generated/apolloComponents.tsx");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_6__);
 
 var _jsxFileName = "/Users/sebastianhiguita/Desktop/typescript/typescript-nextjs-graphql-series/pages/register.tsx";
 
@@ -511,18 +513,19 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 
+
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
     title: "Register Page",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 10
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_generated_apolloComponents__WEBPACK_IMPORTED_MODULE_5__["RegisterComponent"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 11
     },
     __self: this
   }, function (register) {
@@ -552,11 +555,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 case 4:
                   response = _context.sent;
                   console.log(response);
-                  _context.next = 15;
+                  next_router__WEBPACK_IMPORTED_MODULE_6___default.a.push("/check-email");
+                  _context.next = 16;
                   break;
 
-                case 8:
-                  _context.prev = 8;
+                case 9:
+                  _context.prev = 9;
                   _context.t0 = _context["catch"](1);
                   console.log("Err: ", _context.t0.graphQLErrors);
                   errors = {};
@@ -570,12 +574,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                   console.log(errors);
                   setErrors(errors);
 
-                case 15:
+                case 16:
                 case "end":
                   return _context.stop();
               }
             }
-          }, _callee, this, [[1, 8]]);
+          }, _callee, this, [[1, 9]]);
         }));
 
         return function (_x, _x2) {
@@ -590,7 +594,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 12
+        lineNumber: 13
       },
       __self: this
     }, function (_ref3) {
@@ -600,7 +604,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         onSubmit: handleSubmit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 52
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(formik__WEBPACK_IMPORTED_MODULE_3__["Field"], {
@@ -609,7 +613,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         component: _components_fields_InputField__WEBPACK_IMPORTED_MODULE_4__["InputField"],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 50
+          lineNumber: 53
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(formik__WEBPACK_IMPORTED_MODULE_3__["Field"], {
@@ -618,7 +622,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         component: _components_fields_InputField__WEBPACK_IMPORTED_MODULE_4__["InputField"],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 55
+          lineNumber: 58
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(formik__WEBPACK_IMPORTED_MODULE_3__["Field"], {
@@ -627,7 +631,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         component: _components_fields_InputField__WEBPACK_IMPORTED_MODULE_4__["InputField"],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 60
+          lineNumber: 63
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(formik__WEBPACK_IMPORTED_MODULE_3__["Field"], {
@@ -637,14 +641,14 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         component: _components_fields_InputField__WEBPACK_IMPORTED_MODULE_4__["InputField"],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 65
+          lineNumber: 68
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
         type: "submit",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 71
+          lineNumber: 74
         },
         __self: this
       }, "Submit"));
@@ -654,7 +658,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!**********************************!*\
   !*** multi ./pages/register.tsx ***!
   \**********************************/
@@ -718,6 +722,17 @@ module.exports = require("next/head");
 /***/ (function(module, exports) {
 
 module.exports = require("next/link");
+
+/***/ }),
+
+/***/ "next/router":
+/*!******************************!*\
+  !*** external "next/router" ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("next/router");
 
 /***/ }),
 

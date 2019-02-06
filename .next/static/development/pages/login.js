@@ -1,4 +1,4 @@
-((window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/register.js"],{
+((window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/login.js"],{
 
 /***/ "./components/Layout.tsx":
 /*!*******************************!*\
@@ -32459,10 +32459,10 @@ if (hasSymbols()) {
 
 /***/ }),
 
-/***/ "./pages/register.tsx":
-/*!****************************!*\
-  !*** ./pages/register.tsx ***!
-  \****************************/
+/***/ "./pages/login.tsx":
+/*!*************************!*\
+  !*** ./pages/login.tsx ***!
+  \*************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -32479,7 +32479,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! next/router */ "./node_modules/next/router.js");
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_6__);
 
-var _jsxFileName = "/Users/sebastianhiguita/Desktop/typescript/typescript-nextjs-graphql-series/pages/register.tsx";
+var _jsxFileName = "/Users/sebastianhiguita/Desktop/typescript/typescript-nextjs-graphql-series/pages/login.tsx";
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
@@ -32493,19 +32493,19 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    title: "Register Page",
+    title: "Login Page",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_generated_apolloComponents__WEBPACK_IMPORTED_MODULE_5__["RegisterComponent"], {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_generated_apolloComponents__WEBPACK_IMPORTED_MODULE_5__["LoginComponent"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 11
     },
     __self: this
-  }, function (register) {
+  }, function (login) {
     return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(formik__WEBPACK_IMPORTED_MODULE_3__["Formik"], {
       validateOnBlur: false,
       validateOnChange: false,
@@ -32515,48 +32515,40 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         var _ref2 = _asyncToGenerator(
         /*#__PURE__*/
         _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(data, _ref) {
-          var setErrors, response, errors;
+          var setErrors, response;
           return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
             while (1) {
               switch (_context.prev = _context.next) {
                 case 0:
                   setErrors = _ref.setErrors;
-                  _context.prev = 1;
-                  _context.next = 4;
-                  return register({
-                    variables: {
-                      data: data
-                    }
+                  _context.next = 3;
+                  return login({
+                    variables: data
                   });
 
-                case 4:
+                case 3:
                   response = _context.sent;
                   console.log(response);
-                  next_router__WEBPACK_IMPORTED_MODULE_6___default.a.push("/check-email");
-                  _context.next = 16;
-                  break;
+
+                  if (!(response && response.data && !response.data.login)) {
+                    _context.next = 8;
+                    break;
+                  }
+
+                  setErrors({
+                    email: "Invalid login"
+                  });
+                  return _context.abrupt("return");
+
+                case 8:
+                  next_router__WEBPACK_IMPORTED_MODULE_6___default.a.push("/");
 
                 case 9:
-                  _context.prev = 9;
-                  _context.t0 = _context["catch"](1);
-                  console.log("Err: ", _context.t0.graphQLErrors);
-                  errors = {};
-
-                  _context.t0.graphQLErrors[0].validationErrors.forEach(function (validationErr) {
-                    Object.values(validationErr.constraints).forEach(function (message) {
-                      errors[validationErr.property] = message;
-                    });
-                  });
-
-                  console.log(errors);
-                  setErrors(errors);
-
-                case 16:
                 case "end":
                   return _context.stop();
               }
             }
-          }, _callee, this, [[1, 9]]);
+          }, _callee, this);
         }));
 
         return function (_x, _x2) {
@@ -32565,8 +32557,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       }(),
       initialValues: {
         email: "",
-        firstName: "",
-        lastName: "",
         password: ""
       },
       __source: {
@@ -32575,40 +32565,21 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       },
       __self: this
     }, function (_ref3) {
-      var values = _ref3.values,
-          handleSubmit = _ref3.handleSubmit;
+      var handleSubmit = _ref3.handleSubmit;
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("form", {
         onSubmit: handleSubmit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 52
+          lineNumber: 39
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(formik__WEBPACK_IMPORTED_MODULE_3__["Field"], {
-        name: "firstName",
-        placeholder: "First Name",
-        component: _components_fields_InputField__WEBPACK_IMPORTED_MODULE_4__["InputField"],
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 53
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(formik__WEBPACK_IMPORTED_MODULE_3__["Field"], {
-        name: "lastName",
-        placeholder: "Last Name",
-        component: _components_fields_InputField__WEBPACK_IMPORTED_MODULE_4__["InputField"],
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 58
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(formik__WEBPACK_IMPORTED_MODULE_3__["Field"], {
         name: "email",
         placeholder: "Email",
         component: _components_fields_InputField__WEBPACK_IMPORTED_MODULE_4__["InputField"],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63
+          lineNumber: 40
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(formik__WEBPACK_IMPORTED_MODULE_3__["Field"], {
@@ -32618,14 +32589,14 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         component: _components_fields_InputField__WEBPACK_IMPORTED_MODULE_4__["InputField"],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 68
+          lineNumber: 45
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
         type: "submit",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 74
+          lineNumber: 51
         },
         __self: this
       }, "Submit"));
@@ -32648,21 +32619,21 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           next.router.update(r, Component)
         }
       }
-    })(typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__.default : (module.exports.default || module.exports), "/register")
+    })(typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__.default : (module.exports.default || module.exports), "/login")
   
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node_modules/webpack/buildin/harmony-module.js */ "./node_modules/webpack/buildin/harmony-module.js")(module)))
 
 /***/ }),
 
-/***/ 4:
-/*!**********************************!*\
-  !*** multi ./pages/register.tsx ***!
-  \**********************************/
+/***/ 7:
+/*!*******************************!*\
+  !*** multi ./pages/login.tsx ***!
+  \*******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__NEXT_REGISTER_PAGE('/register', function() {
-module.exports = __webpack_require__(/*! ./pages/register.tsx */"./pages/register.tsx");
+__NEXT_REGISTER_PAGE('/login', function() {
+module.exports = __webpack_require__(/*! ./pages/login.tsx */"./pages/login.tsx");
 
 return { page: module.exports.default }});
 
@@ -32679,5 +32650,5 @@ module.exports = dll_b2d9fd95b535cd8bf589;
 
 /***/ })
 
-},[[4,"static/runtime/webpack.js"]]]));;
-//# sourceMappingURL=register.js.map
+},[[7,"static/runtime/webpack.js"]]]));;
+//# sourceMappingURL=login.js.map
