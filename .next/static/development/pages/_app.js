@@ -83,6 +83,31 @@ var isBrowser = true;
 
 /***/ }),
 
+/***/ "./lib/redirect.ts":
+/*!*************************!*\
+  !*** ./lib/redirect.ts ***!
+  \*************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! next/router */ "./node_modules/next/router.js");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_0__);
+
+/* harmony default export */ __webpack_exports__["default"] = (function (context, target) {
+  if (context.res) {
+    context.res.writeHead(303, {
+      location: target
+    });
+    context.res.end();
+  } else {
+    next_router__WEBPACK_IMPORTED_MODULE_0___default.a.replace(target);
+  }
+});
+
+/***/ }),
+
 /***/ "./lib/withApollo.tsx":
 /*!****************************!*\
   !*** ./lib/withApollo.tsx ***!
@@ -106,7 +131,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_apollo__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _initApollo__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./initApollo */ "./lib/initApollo.ts");
 /* harmony import */ var _isBrowser__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./isBrowser */ "./lib/isBrowser.ts");
+/* harmony import */ var _redirect__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./redirect */ "./lib/redirect.ts");
 
+var _jsxFileName = "/Users/sebastianhiguita/Desktop/typescript/typescript-nextjs-graphql-series/lib/withApollo.tsx";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -135,6 +162,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -199,7 +227,7 @@ function parseCookies(req) {
 
                 case 10:
                   if (_isBrowser__WEBPACK_IMPORTED_MODULE_7__["isBrowser"]) {
-                    _context.next = 20;
+                    _context.next = 21;
                     break;
                   }
 
@@ -208,11 +236,16 @@ function parseCookies(req) {
                   return Object(react_apollo__WEBPACK_IMPORTED_MODULE_5__["getDataFromTree"])(react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(App, _extends({}, appProps, {
                     Component: Component,
                     router: router,
-                    apolloClient: apollo
+                    apolloClient: apollo,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 49
+                    },
+                    __self: this
                   })));
 
                 case 14:
-                  _context.next = 19;
+                  _context.next = 20;
                   break;
 
                 case 16:
@@ -220,16 +253,20 @@ function parseCookies(req) {
                   _context.t0 = _context["catch"](11);
                   console.error("Error while running `getDataFromTree`", _context.t0);
 
-                case 19:
-                  next_head__WEBPACK_IMPORTED_MODULE_2___default.a.rewind();
+                  if (_context.t0.message.includes("not authenticated")) {
+                    Object(_redirect__WEBPACK_IMPORTED_MODULE_8__["default"])(ctx.ctx, "/login");
+                  }
 
                 case 20:
+                  next_head__WEBPACK_IMPORTED_MODULE_2___default.a.rewind();
+
+                case 21:
                   apolloState = apollo.cache.extract();
                   return _context.abrupt("return", _objectSpread({}, appProps, {
                     apolloState: apolloState
                   }));
 
-                case 22:
+                case 23:
                 case "end":
                   return _context.stop();
               }
@@ -263,7 +300,12 @@ function parseCookies(req) {
       key: "render",
       value: function render() {
         return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(App, _extends({}, this.props, {
-          apolloClient: this.apolloClient
+          apolloClient: this.apolloClient,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 87
+          },
+          __self: this
         }));
       }
     }]);
@@ -34944,6 +34986,18 @@ function getURL() {
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(/*! ./dist/lib/head */ "./node_modules/next/dist/lib/head.js")
+
+
+/***/ }),
+
+/***/ "./node_modules/next/router.js":
+/*!*************************************!*\
+  !*** ./node_modules/next/router.js ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! ./dist/lib/router */ "./node_modules/next/dist/lib/router/index.js")
 
 
 /***/ }),

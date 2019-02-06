@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -116,30 +116,30 @@ var _jsxFileName = "/Users/sebastianhiguita/Desktop/typescript/typescript-nextjs
 var Layout = function Layout(_ref) {
   var children = _ref.children,
       _ref$title = _ref.title,
-      title = _ref$title === void 0 ? 'This is the default title' : _ref$title;
+      title = _ref$title === void 0 ? "This is the default title" : _ref$title;
   return react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 13
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](next_head__WEBPACK_IMPORTED_MODULE_2___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 14
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 15
     },
     __self: this
   }, title), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("meta", {
     charSet: "utf-8",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 16
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("meta", {
@@ -147,89 +147,89 @@ var Layout = function Layout(_ref) {
     content: "initial-scale=1.0, width=device-width",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 17
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("header", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 19
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("nav", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 20
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("a", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18
-    },
-    __self: this
-  }, "Home")), " | ", ' ', react__WEBPACK_IMPORTED_MODULE_0__["createElement"](next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/list-fc",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("a", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19
-    },
-    __self: this
-  }, "List as Functional Component")), " | ", ' ', react__WEBPACK_IMPORTED_MODULE_0__["createElement"](next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/list-class",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 20
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("a", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 20
-    },
-    __self: this
-  }, "List As Class")), " | ", ' ', react__WEBPACK_IMPORTED_MODULE_0__["createElement"](next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/about",
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 21
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 22
     },
     __self: this
-  }, "About")), " | ", ' ')), children, react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("footer", {
+  }, "Home")), " ", "|", " ", react__WEBPACK_IMPORTED_MODULE_0__["createElement"](next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/hello",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 25
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("hr", {
+  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("a", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 26
     },
     __self: this
+  }, "Hello")), " ", "|", " ", react__WEBPACK_IMPORTED_MODULE_0__["createElement"](next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/register",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    },
+    __self: this
+  }, "Register")), " ", "|", " ", react__WEBPACK_IMPORTED_MODULE_0__["createElement"](next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/login",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34
+    },
+    __self: this
+  }, "Login")), " ", "|", " ")), children, react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("footer", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("hr", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41
+    },
+    __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 42
     },
     __self: this
   }, "I'm here to stay (Footer)")));
@@ -243,7 +243,7 @@ var Layout = function Layout(_ref) {
 /*!****************************************!*\
   !*** ./generated/apolloComponents.tsx ***!
   \****************************************/
-/*! exports provided: ConfirmUserDocument, ConfirmUserComponent, ConfirmUserHOC, LoginDocument, LoginComponent, LoginHOC, RegisterDocument, RegisterComponent, RegisterHOC */
+/*! exports provided: ConfirmUserDocument, ConfirmUserComponent, ConfirmUserHOC, LoginDocument, LoginComponent, LoginHOC, RegisterDocument, RegisterComponent, RegisterHOC, HelloDocument, HelloComponent, HelloHOC */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -257,6 +257,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RegisterDocument", function() { return RegisterDocument; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RegisterComponent", function() { return RegisterComponent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RegisterHOC", function() { return RegisterHOC; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HelloDocument", function() { return HelloDocument; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HelloComponent", function() { return HelloComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HelloHOC", function() { return HelloHOC; });
 /* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-apollo */ "react-apollo");
 /* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_apollo__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
@@ -266,6 +269,16 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/sebastianhiguita/Desktop/typescript/typescript-nextjs-graphql-series/generated/apolloComponents.tsx";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _templateObject4() {
+  var data = _taggedTemplateLiteral(["\n  query Hello {\n    hello\n  }\n"]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
 
 function _templateObject3() {
   var data = _taggedTemplateLiteral(["\n  mutation Register($data: RegisterInput!) {\n    register(data: $data) {\n      id\n      firstName\n      lastName\n      email\n      name\n    }\n  }\n"]);
@@ -347,7 +360,7 @@ function (_React$Component) {
       }, this["props"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 104
+          lineNumber: 112
         },
         __self: this
       }));
@@ -379,7 +392,7 @@ function (_React$Component2) {
       }, this["props"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 152
+          lineNumber: 160
         },
         __self: this
       }));
@@ -411,7 +424,7 @@ function (_React$Component3) {
       }, this["props"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 200
+          lineNumber: 208
         },
         __self: this
       }));
@@ -422,6 +435,38 @@ function (_React$Component3) {
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
 function RegisterHOC(operationOptions) {
   return react_apollo__WEBPACK_IMPORTED_MODULE_0__["graphql"](RegisterDocument, operationOptions);
+}
+var HelloDocument = graphql_tag__WEBPACK_IMPORTED_MODULE_2___default()(_templateObject4());
+var HelloComponent =
+/*#__PURE__*/
+function (_React$Component4) {
+  _inherits(HelloComponent, _React$Component4);
+
+  function HelloComponent() {
+    _classCallCheck(this, HelloComponent);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(HelloComponent).apply(this, arguments));
+  }
+
+  _createClass(HelloComponent, [{
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_1__["createElement"](react_apollo__WEBPACK_IMPORTED_MODULE_0__["Query"], _extends({
+        query: HelloDocument
+      }, this["props"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 250
+        },
+        __self: this
+      }));
+    }
+  }]);
+
+  return HelloComponent;
+}(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
+function HelloHOC(operationOptions) {
+  return react_apollo__WEBPACK_IMPORTED_MODULE_0__["graphql"](HelloDocument, operationOptions);
 }
 
 /***/ }),
@@ -538,7 +583,7 @@ var IndexPage = function IndexPage() {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!*******************************!*\
   !*** multi ./pages/index.tsx ***!
   \*******************************/

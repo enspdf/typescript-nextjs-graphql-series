@@ -7,6 +7,8 @@ import { createHttpLink } from "apollo-link-http";
 import { setContext } from "apollo-link-context";
 import fetch from "isomorphic-unfetch";
 import { isBrowser } from "./isBrowser";
+import { onError } from "apollo-link-error";
+import Router from "next/router";
 
 let apolloClient: ApolloClient<NormalizedCacheObject> | null = null;
 
@@ -24,6 +26,21 @@ function create(initialState: any, { getToken }: Options) {
     credentials: "include"
   });
 
+  const errorLink = onError(({ graphQLErrors, networkError }) => {
+    if (graphQLErrors)
+      graphQLErrors.map(({ message, locations, path }) => {
+        console.log(
+          `[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`
+        );
+
+        if (isBrowser && message.includes("not authenticated")) {
+          Router.replace("/login");
+        }
+      });
+
+    if (networkError) console.log(`[Network error]: ${networkError}`);
+  });
+
   const authLink = setContext((_, { headers }) => {
     const token = getToken();
     return {
@@ -37,7 +54,7 @@ function create(initialState: any, { getToken }: Options) {
   return new ApolloClient({
     connectToDevTools: isBrowser,
     ssrMode: !isBrowser,
-    link: authLink.concat(httpLink),
+    link: errorLink.concat(authLink.concat(httpLink)),
     cache: new InMemoryCache().restore(initialState || {})
   });
 }
